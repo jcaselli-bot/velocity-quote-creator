@@ -20,5 +20,16 @@ Open the local URL shown in the terminal. Pricing is processed entirely in the b
 ## Build
 
 ```bash
-pnpm build
+npm run build
 ```
+
+## Deploy to Cloudflare Pages
+
+Connect this GitHub repository to Cloudflare Pages and use:
+
+- Framework preset: React (Vite)
+- Build command: `npm run build`
+- Build output directory: `dist`
+- Root directory: leave blank
+
+No environment variables are required.
