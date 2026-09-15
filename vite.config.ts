@@ -3,6 +3,7 @@ import react from "@vitejs/plugin-react";
 import { defineConfig } from "vite";
 
 export default defineConfig({
+  base: "/quote-creator/",
   plugins: [react()],
   resolve: {
     alias: {
@@ -10,6 +11,6 @@ export default defineConfig({
     },
   },
   build: {
-    outDir: "dist",
+    outDir: "dist/quote-creator",
   },
 });
