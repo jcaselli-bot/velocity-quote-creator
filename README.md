@@ -33,3 +33,13 @@ Connect this GitHub repository to Cloudflare Pages and use:
 - Root directory: leave blank
 
 No environment variables are required.
+
+## Deploy with Cloudflare Workers Builds
+
+Use these build settings:
+
+- Build command: `npm run build`
+- Deploy command: `npm run deploy`
+- Root directory: leave blank
+
+The included `wrangler.jsonc` deploys the generated `dist` directory as a static single-page application.
