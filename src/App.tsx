@@ -222,7 +222,7 @@ export default function Home() {
     try {
       const { PDFDocument, StandardFonts, rgb } = await import("pdf-lib");
       const templateResponse = await fetch(
-        "/velocity-roofing-package-options.pdf",
+        `${import.meta.env.BASE_URL}velocity-roofing-package-options.pdf`,
       );
       if (!templateResponse.ok) throw new Error("Template could not be loaded");
 
@@ -413,7 +413,7 @@ export default function Home() {
             <div className="bg-[#e9edf2] p-3 sm:p-6 lg:p-8">
               <div className="pdf-preview relative mx-auto w-full max-w-[980px] overflow-hidden rounded-md bg-white shadow-[0_16px_45px_rgba(15,23,42,.18)]">
                 <img
-                  src="/velocity-roofing-package-options-preview.png"
+                  src={`${import.meta.env.BASE_URL}velocity-roofing-package-options-preview.png`}
                   alt="Velocity Roofing package options PDF preview"
                   className="block h-auto w-full"
                 />
