@@ -59,12 +59,12 @@ const packages: Array<{
 ];
 
 const placements: Array<{ key: PriceKey; x: number; y: number }> = [
-  { key: "standardProject", x: 132.9, y: 74.8 },
-  { key: "standardMonthly", x: 132.9, y: 54.6 },
-  { key: "silverProject", x: 368.3, y: 74.8 },
-  { key: "silverMonthly", x: 368.3, y: 54.6 },
-  { key: "goldProject", x: 603.8, y: 74.8 },
-  { key: "goldMonthly", x: 603.8, y: 54.6 },
+  { key: "standardProject", x: 132.9, y: 76.2 },
+  { key: "standardMonthly", x: 132.9, y: 56.0 },
+  { key: "silverProject", x: 368.3, y: 76.2 },
+  { key: "silverMonthly", x: 368.3, y: 56.0 },
+  { key: "goldProject", x: 603.8, y: 76.2 },
+  { key: "goldMonthly", x: 603.8, y: 56.0 },
 ];
 
 const previewPlacements: Array<{ key: PriceKey; left: string; top: string }> = [
