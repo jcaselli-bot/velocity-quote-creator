@@ -59,21 +59,21 @@ const packages: Array<{
 ];
 
 const placements: Array<{ key: PriceKey; x: number; y: number }> = [
-  { key: "standardProject", x: 132.9, y: 76.2 },
-  { key: "standardMonthly", x: 132.9, y: 56.0 },
-  { key: "silverProject", x: 368.3, y: 76.2 },
-  { key: "silverMonthly", x: 368.3, y: 56.0 },
-  { key: "goldProject", x: 603.8, y: 76.2 },
-  { key: "goldMonthly", x: 603.8, y: 56.0 },
+  { key: "standardProject", x: 169, y: 106.1 },
+  { key: "standardMonthly", x: 169, y: 79.1 },
+  { key: "silverProject", x: 425, y: 106.1 },
+  { key: "silverMonthly", x: 425, y: 79.1 },
+  { key: "goldProject", x: 681, y: 106.1 },
+  { key: "goldMonthly", x: 681, y: 79.1 },
 ];
 
 const previewPlacements: Array<{ key: PriceKey; left: string; top: string }> = [
-  { key: "standardProject", left: "18.46%", top: "79.06%" },
-  { key: "standardMonthly", left: "18.46%", top: "84.04%" },
-  { key: "silverProject", left: "51.16%", top: "79.06%" },
-  { key: "silverMonthly", left: "51.16%", top: "84.04%" },
-  { key: "goldProject", left: "83.86%", top: "79.06%" },
-  { key: "goldMonthly", left: "83.86%", top: "84.04%" },
+  { key: "standardProject", left: "21.34%", top: "81.24%" },
+  { key: "standardMonthly", left: "21.34%", top: "85.65%" },
+  { key: "silverProject", left: "53.66%", top: "81.24%" },
+  { key: "silverMonthly", left: "53.66%", top: "85.65%" },
+  { key: "goldProject", left: "85.98%", top: "81.24%" },
+  { key: "goldMonthly", left: "85.98%", top: "85.65%" },
 ];
 
 function numericValue(value: string) {
@@ -230,17 +230,17 @@ export default function Home() {
       const pdfDocument = await PDFDocument.load(templateBytes);
       const page = pdfDocument.getPages()[0];
       const font = await pdfDocument.embedFont(StandardFonts.HelveticaBold);
-      const fieldBackground = rgb(248 / 255, 250 / 255, 252 / 255);
-      const fieldText = rgb(16 / 255, 24 / 255, 39 / 255);
+      const fieldBackground = rgb(243 / 255, 246 / 255, 250 / 255);
+      const fieldText = rgb(29 / 255, 41 / 255, 57 / 255);
 
       for (const placement of placements) {
         const amount = formatValue(values[placement.key]);
-        const fontSize = amount.length > 11 ? 7.7 : amount.length > 9 ? 8.4 : 9;
+        const fontSize = amount.length > 11 ? 8 : amount.length > 9 ? 8.8 : 9.5;
         page.drawRectangle({
-          x: placement.x - 1.2,
-          y: placement.y - 1.7,
-          width: 66.2,
-          height: 12.8,
+          x: placement.x - 1.5,
+          y: placement.y - 2.3,
+          width: 71.5,
+          height: 14.5,
           color: fieldBackground,
         });
         page.drawText(amount, {
@@ -422,7 +422,7 @@ export default function Home() {
                   return value ? (
                     <span
                       key={placement.key}
-                      className="pdf-value absolute bg-[#f8fafc] font-bold leading-none text-[#101827]"
+                      className="pdf-value absolute bg-[#f3f6fa] font-bold leading-none text-[#1d2939]"
                       style={{ left: placement.left, top: placement.top }}
                     >
                       {value}
